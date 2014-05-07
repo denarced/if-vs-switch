@@ -2,19 +2,19 @@
 #include <stdlib.h>
 #include <time.h>
 
-void with_if(int number);
-void with_switch(int number);
-void run_with(int flag, int run_count);
+void withIf(int number);
+void withSwitch(int number);
+void runWith(int flag, int runCount);
 
 #define USE_IF 0
 #define USE_SWITCH 1
 #define LIMIT 1000
 
 int main(int argc, char **argv) {
-    int no_runs = -1;
+    int noRuns = -1;
     if (1 < argc) {
-        sscanf(argv[1], "%d", &no_runs);
-        if (no_runs < 1) {
+        sscanf(argv[1], "%d", &noRuns);
+        if (noRuns < 1) {
             printf("The number must be higher than 0.\n");
             return 1;
         }
@@ -22,2043 +22,2043 @@ int main(int argc, char **argv) {
         printf("Give me a number.\n");
         return 1;
     }
-    printf("%d runs:\n", no_runs);
-    run_with(USE_IF, no_runs);
-    run_with(USE_SWITCH, no_runs);
+    printf("%d runs:\n", noRuns);
+    runWith(USE_IF, noRuns);
+    runWith(USE_SWITCH, noRuns);
     return 0;
 }
 
-void run_with(int flag, int run_count) {
-    int i;
-    clock_t start;
+void runWith(int flag, int runCount) {
     printf("\t");
     void (*f_ptr)(int) = NULL;
     if (flag == USE_IF) {
         printf("using if-else: ");
-        f_ptr = &with_if;
+        f_ptr = &withIf;
     } else if (flag == USE_SWITCH) {
         printf("using switch-case: ");
-        f_ptr = &with_switch;
+        f_ptr = &withSwitch;
     } else {
         fprintf(stderr, "Error, undefined flag value.\n");
         exit(1);
     }
-    start = clock();
-    for (i = 0; i < run_count; ++i) {
+    clock_t start = clock();
+    int i;
+    for (i = 0; i < runCount; ++i) {
         (*f_ptr)(-1);
     }
     printf("%lf\n", (double)(clock() - start) / CLOCKS_PER_SEC);
 }
 
-void with_if(int number) {
+void withIf(int number) {
     int other = 0;
-    if (number == 0)
+    if (number == 0) {
         other++;
-    else if (number == 1)
+    } else if (number == 1) {
         other++;
-    else if (number == 2)
+    } else if (number == 2) {
         other++;
-    else if (number == 3)
+    } else if (number == 3) {
         other++;
-    else if (number == 4)
+    } else if (number == 4) {
         other++;
-    else if (number == 5)
+    } else if (number == 5) {
         other++;
-    else if (number == 6)
+    } else if (number == 6) {
         other++;
-    else if (number == 7)
+    } else if (number == 7) {
         other++;
-    else if (number == 8)
+    } else if (number == 8) {
         other++;
-    else if (number == 9)
+    } else if (number == 9) {
         other++;
-    else if (number == 10)
+    } else if (number == 10) {
         other++;
-    else if (number == 11)
+    } else if (number == 11) {
         other++;
-    else if (number == 12)
+    } else if (number == 12) {
         other++;
-    else if (number == 13)
+    } else if (number == 13) {
         other++;
-    else if (number == 14)
+    } else if (number == 14) {
         other++;
-    else if (number == 15)
+    } else if (number == 15) {
         other++;
-    else if (number == 16)
+    } else if (number == 16) {
         other++;
-    else if (number == 17)
+    } else if (number == 17) {
         other++;
-    else if (number == 18)
+    } else if (number == 18) {
         other++;
-    else if (number == 19)
+    } else if (number == 19) {
         other++;
-    else if (number == 20)
+    } else if (number == 20) {
         other++;
-    else if (number == 21)
+    } else if (number == 21) {
         other++;
-    else if (number == 22)
+    } else if (number == 22) {
         other++;
-    else if (number == 23)
+    } else if (number == 23) {
         other++;
-    else if (number == 24)
+    } else if (number == 24) {
         other++;
-    else if (number == 25)
+    } else if (number == 25) {
         other++;
-    else if (number == 26)
+    } else if (number == 26) {
         other++;
-    else if (number == 27)
+    } else if (number == 27) {
         other++;
-    else if (number == 28)
+    } else if (number == 28) {
         other++;
-    else if (number == 29)
+    } else if (number == 29) {
         other++;
-    else if (number == 30)
+    } else if (number == 30) {
         other++;
-    else if (number == 31)
+    } else if (number == 31) {
         other++;
-    else if (number == 32)
+    } else if (number == 32) {
         other++;
-    else if (number == 33)
+    } else if (number == 33) {
         other++;
-    else if (number == 34)
+    } else if (number == 34) {
         other++;
-    else if (number == 35)
+    } else if (number == 35) {
         other++;
-    else if (number == 36)
+    } else if (number == 36) {
         other++;
-    else if (number == 37)
+    } else if (number == 37) {
         other++;
-    else if (number == 38)
+    } else if (number == 38) {
         other++;
-    else if (number == 39)
+    } else if (number == 39) {
         other++;
-    else if (number == 40)
+    } else if (number == 40) {
         other++;
-    else if (number == 41)
+    } else if (number == 41) {
         other++;
-    else if (number == 42)
+    } else if (number == 42) {
         other++;
-    else if (number == 43)
+    } else if (number == 43) {
         other++;
-    else if (number == 44)
+    } else if (number == 44) {
         other++;
-    else if (number == 45)
+    } else if (number == 45) {
         other++;
-    else if (number == 46)
+    } else if (number == 46) {
         other++;
-    else if (number == 47)
+    } else if (number == 47) {
         other++;
-    else if (number == 48)
+    } else if (number == 48) {
         other++;
-    else if (number == 49)
+    } else if (number == 49) {
         other++;
-    else if (number == 50)
+    } else if (number == 50) {
         other++;
-    else if (number == 51)
+    } else if (number == 51) {
         other++;
-    else if (number == 52)
+    } else if (number == 52) {
         other++;
-    else if (number == 53)
+    } else if (number == 53) {
         other++;
-    else if (number == 54)
+    } else if (number == 54) {
         other++;
-    else if (number == 55)
+    } else if (number == 55) {
         other++;
-    else if (number == 56)
+    } else if (number == 56) {
         other++;
-    else if (number == 57)
+    } else if (number == 57) {
         other++;
-    else if (number == 58)
+    } else if (number == 58) {
         other++;
-    else if (number == 59)
+    } else if (number == 59) {
         other++;
-    else if (number == 60)
+    } else if (number == 60) {
         other++;
-    else if (number == 61)
+    } else if (number == 61) {
         other++;
-    else if (number == 62)
+    } else if (number == 62) {
         other++;
-    else if (number == 63)
+    } else if (number == 63) {
         other++;
-    else if (number == 64)
+    } else if (number == 64) {
         other++;
-    else if (number == 65)
+    } else if (number == 65) {
         other++;
-    else if (number == 66)
+    } else if (number == 66) {
         other++;
-    else if (number == 67)
+    } else if (number == 67) {
         other++;
-    else if (number == 68)
+    } else if (number == 68) {
         other++;
-    else if (number == 69)
+    } else if (number == 69) {
         other++;
-    else if (number == 70)
+    } else if (number == 70) {
         other++;
-    else if (number == 71)
+    } else if (number == 71) {
         other++;
-    else if (number == 72)
+    } else if (number == 72) {
         other++;
-    else if (number == 73)
+    } else if (number == 73) {
         other++;
-    else if (number == 74)
+    } else if (number == 74) {
         other++;
-    else if (number == 75)
+    } else if (number == 75) {
         other++;
-    else if (number == 76)
+    } else if (number == 76) {
         other++;
-    else if (number == 77)
+    } else if (number == 77) {
         other++;
-    else if (number == 78)
+    } else if (number == 78) {
         other++;
-    else if (number == 79)
+    } else if (number == 79) {
         other++;
-    else if (number == 80)
+    } else if (number == 80) {
         other++;
-    else if (number == 81)
+    } else if (number == 81) {
         other++;
-    else if (number == 82)
+    } else if (number == 82) {
         other++;
-    else if (number == 83)
+    } else if (number == 83) {
         other++;
-    else if (number == 84)
+    } else if (number == 84) {
         other++;
-    else if (number == 85)
+    } else if (number == 85) {
         other++;
-    else if (number == 86)
+    } else if (number == 86) {
         other++;
-    else if (number == 87)
+    } else if (number == 87) {
         other++;
-    else if (number == 88)
+    } else if (number == 88) {
         other++;
-    else if (number == 89)
+    } else if (number == 89) {
         other++;
-    else if (number == 90)
+    } else if (number == 90) {
         other++;
-    else if (number == 91)
+    } else if (number == 91) {
         other++;
-    else if (number == 92)
+    } else if (number == 92) {
         other++;
-    else if (number == 93)
+    } else if (number == 93) {
         other++;
-    else if (number == 94)
+    } else if (number == 94) {
         other++;
-    else if (number == 95)
+    } else if (number == 95) {
         other++;
-    else if (number == 96)
+    } else if (number == 96) {
         other++;
-    else if (number == 97)
+    } else if (number == 97) {
         other++;
-    else if (number == 98)
+    } else if (number == 98) {
         other++;
-    else if (number == 99)
+    } else if (number == 99) {
         other++;
-    else if (number == 100)
+    } else if (number == 100) {
         other++;
-    else if (number == 101)
+    } else if (number == 101) {
         other++;
-    else if (number == 102)
+    } else if (number == 102) {
         other++;
-    else if (number == 103)
+    } else if (number == 103) {
         other++;
-    else if (number == 104)
+    } else if (number == 104) {
         other++;
-    else if (number == 105)
+    } else if (number == 105) {
         other++;
-    else if (number == 106)
+    } else if (number == 106) {
         other++;
-    else if (number == 107)
+    } else if (number == 107) {
         other++;
-    else if (number == 108)
+    } else if (number == 108) {
         other++;
-    else if (number == 109)
+    } else if (number == 109) {
         other++;
-    else if (number == 110)
+    } else if (number == 110) {
         other++;
-    else if (number == 111)
+    } else if (number == 111) {
         other++;
-    else if (number == 112)
+    } else if (number == 112) {
         other++;
-    else if (number == 113)
+    } else if (number == 113) {
         other++;
-    else if (number == 114)
+    } else if (number == 114) {
         other++;
-    else if (number == 115)
+    } else if (number == 115) {
         other++;
-    else if (number == 116)
+    } else if (number == 116) {
         other++;
-    else if (number == 117)
+    } else if (number == 117) {
         other++;
-    else if (number == 118)
+    } else if (number == 118) {
         other++;
-    else if (number == 119)
+    } else if (number == 119) {
         other++;
-    else if (number == 120)
+    } else if (number == 120) {
         other++;
-    else if (number == 121)
+    } else if (number == 121) {
         other++;
-    else if (number == 122)
+    } else if (number == 122) {
         other++;
-    else if (number == 123)
+    } else if (number == 123) {
         other++;
-    else if (number == 124)
+    } else if (number == 124) {
         other++;
-    else if (number == 125)
+    } else if (number == 125) {
         other++;
-    else if (number == 126)
+    } else if (number == 126) {
         other++;
-    else if (number == 127)
+    } else if (number == 127) {
         other++;
-    else if (number == 128)
+    } else if (number == 128) {
         other++;
-    else if (number == 129)
+    } else if (number == 129) {
         other++;
-    else if (number == 130)
+    } else if (number == 130) {
         other++;
-    else if (number == 131)
+    } else if (number == 131) {
         other++;
-    else if (number == 132)
+    } else if (number == 132) {
         other++;
-    else if (number == 133)
+    } else if (number == 133) {
         other++;
-    else if (number == 134)
+    } else if (number == 134) {
         other++;
-    else if (number == 135)
+    } else if (number == 135) {
         other++;
-    else if (number == 136)
+    } else if (number == 136) {
         other++;
-    else if (number == 137)
+    } else if (number == 137) {
         other++;
-    else if (number == 138)
+    } else if (number == 138) {
         other++;
-    else if (number == 139)
+    } else if (number == 139) {
         other++;
-    else if (number == 140)
+    } else if (number == 140) {
         other++;
-    else if (number == 141)
+    } else if (number == 141) {
         other++;
-    else if (number == 142)
+    } else if (number == 142) {
         other++;
-    else if (number == 143)
+    } else if (number == 143) {
         other++;
-    else if (number == 144)
+    } else if (number == 144) {
         other++;
-    else if (number == 145)
+    } else if (number == 145) {
         other++;
-    else if (number == 146)
+    } else if (number == 146) {
         other++;
-    else if (number == 147)
+    } else if (number == 147) {
         other++;
-    else if (number == 148)
+    } else if (number == 148) {
         other++;
-    else if (number == 149)
+    } else if (number == 149) {
         other++;
-    else if (number == 150)
+    } else if (number == 150) {
         other++;
-    else if (number == 151)
+    } else if (number == 151) {
         other++;
-    else if (number == 152)
+    } else if (number == 152) {
         other++;
-    else if (number == 153)
+    } else if (number == 153) {
         other++;
-    else if (number == 154)
+    } else if (number == 154) {
         other++;
-    else if (number == 155)
+    } else if (number == 155) {
         other++;
-    else if (number == 156)
+    } else if (number == 156) {
         other++;
-    else if (number == 157)
+    } else if (number == 157) {
         other++;
-    else if (number == 158)
+    } else if (number == 158) {
         other++;
-    else if (number == 159)
+    } else if (number == 159) {
         other++;
-    else if (number == 160)
+    } else if (number == 160) {
         other++;
-    else if (number == 161)
+    } else if (number == 161) {
         other++;
-    else if (number == 162)
+    } else if (number == 162) {
         other++;
-    else if (number == 163)
+    } else if (number == 163) {
         other++;
-    else if (number == 164)
+    } else if (number == 164) {
         other++;
-    else if (number == 165)
+    } else if (number == 165) {
         other++;
-    else if (number == 166)
+    } else if (number == 166) {
         other++;
-    else if (number == 167)
+    } else if (number == 167) {
         other++;
-    else if (number == 168)
+    } else if (number == 168) {
         other++;
-    else if (number == 169)
+    } else if (number == 169) {
         other++;
-    else if (number == 170)
+    } else if (number == 170) {
         other++;
-    else if (number == 171)
+    } else if (number == 171) {
         other++;
-    else if (number == 172)
+    } else if (number == 172) {
         other++;
-    else if (number == 173)
+    } else if (number == 173) {
         other++;
-    else if (number == 174)
+    } else if (number == 174) {
         other++;
-    else if (number == 175)
+    } else if (number == 175) {
         other++;
-    else if (number == 176)
+    } else if (number == 176) {
         other++;
-    else if (number == 177)
+    } else if (number == 177) {
         other++;
-    else if (number == 178)
+    } else if (number == 178) {
         other++;
-    else if (number == 179)
+    } else if (number == 179) {
         other++;
-    else if (number == 180)
+    } else if (number == 180) {
         other++;
-    else if (number == 181)
+    } else if (number == 181) {
         other++;
-    else if (number == 182)
+    } else if (number == 182) {
         other++;
-    else if (number == 183)
+    } else if (number == 183) {
         other++;
-    else if (number == 184)
+    } else if (number == 184) {
         other++;
-    else if (number == 185)
+    } else if (number == 185) {
         other++;
-    else if (number == 186)
+    } else if (number == 186) {
         other++;
-    else if (number == 187)
+    } else if (number == 187) {
         other++;
-    else if (number == 188)
+    } else if (number == 188) {
         other++;
-    else if (number == 189)
+    } else if (number == 189) {
         other++;
-    else if (number == 190)
+    } else if (number == 190) {
         other++;
-    else if (number == 191)
+    } else if (number == 191) {
         other++;
-    else if (number == 192)
+    } else if (number == 192) {
         other++;
-    else if (number == 193)
+    } else if (number == 193) {
         other++;
-    else if (number == 194)
+    } else if (number == 194) {
         other++;
-    else if (number == 195)
+    } else if (number == 195) {
         other++;
-    else if (number == 196)
+    } else if (number == 196) {
         other++;
-    else if (number == 197)
+    } else if (number == 197) {
         other++;
-    else if (number == 198)
+    } else if (number == 198) {
         other++;
-    else if (number == 199)
+    } else if (number == 199) {
         other++;
-    else if (number == 200)
+    } else if (number == 200) {
         other++;
-    else if (number == 201)
+    } else if (number == 201) {
         other++;
-    else if (number == 202)
+    } else if (number == 202) {
         other++;
-    else if (number == 203)
+    } else if (number == 203) {
         other++;
-    else if (number == 204)
+    } else if (number == 204) {
         other++;
-    else if (number == 205)
+    } else if (number == 205) {
         other++;
-    else if (number == 206)
+    } else if (number == 206) {
         other++;
-    else if (number == 207)
+    } else if (number == 207) {
         other++;
-    else if (number == 208)
+    } else if (number == 208) {
         other++;
-    else if (number == 209)
+    } else if (number == 209) {
         other++;
-    else if (number == 210)
+    } else if (number == 210) {
         other++;
-    else if (number == 211)
+    } else if (number == 211) {
         other++;
-    else if (number == 212)
+    } else if (number == 212) {
         other++;
-    else if (number == 213)
+    } else if (number == 213) {
         other++;
-    else if (number == 214)
+    } else if (number == 214) {
         other++;
-    else if (number == 215)
+    } else if (number == 215) {
         other++;
-    else if (number == 216)
+    } else if (number == 216) {
         other++;
-    else if (number == 217)
+    } else if (number == 217) {
         other++;
-    else if (number == 218)
+    } else if (number == 218) {
         other++;
-    else if (number == 219)
+    } else if (number == 219) {
         other++;
-    else if (number == 220)
+    } else if (number == 220) {
         other++;
-    else if (number == 221)
+    } else if (number == 221) {
         other++;
-    else if (number == 222)
+    } else if (number == 222) {
         other++;
-    else if (number == 223)
+    } else if (number == 223) {
         other++;
-    else if (number == 224)
+    } else if (number == 224) {
         other++;
-    else if (number == 225)
+    } else if (number == 225) {
         other++;
-    else if (number == 226)
+    } else if (number == 226) {
         other++;
-    else if (number == 227)
+    } else if (number == 227) {
         other++;
-    else if (number == 228)
+    } else if (number == 228) {
         other++;
-    else if (number == 229)
+    } else if (number == 229) {
         other++;
-    else if (number == 230)
+    } else if (number == 230) {
         other++;
-    else if (number == 231)
+    } else if (number == 231) {
         other++;
-    else if (number == 232)
+    } else if (number == 232) {
         other++;
-    else if (number == 233)
+    } else if (number == 233) {
         other++;
-    else if (number == 234)
+    } else if (number == 234) {
         other++;
-    else if (number == 235)
+    } else if (number == 235) {
         other++;
-    else if (number == 236)
+    } else if (number == 236) {
         other++;
-    else if (number == 237)
+    } else if (number == 237) {
         other++;
-    else if (number == 238)
+    } else if (number == 238) {
         other++;
-    else if (number == 239)
+    } else if (number == 239) {
         other++;
-    else if (number == 240)
+    } else if (number == 240) {
         other++;
-    else if (number == 241)
+    } else if (number == 241) {
         other++;
-    else if (number == 242)
+    } else if (number == 242) {
         other++;
-    else if (number == 243)
+    } else if (number == 243) {
         other++;
-    else if (number == 244)
+    } else if (number == 244) {
         other++;
-    else if (number == 245)
+    } else if (number == 245) {
         other++;
-    else if (number == 246)
+    } else if (number == 246) {
         other++;
-    else if (number == 247)
+    } else if (number == 247) {
         other++;
-    else if (number == 248)
+    } else if (number == 248) {
         other++;
-    else if (number == 249)
+    } else if (number == 249) {
         other++;
-    else if (number == 250)
+    } else if (number == 250) {
         other++;
-    else if (number == 251)
+    } else if (number == 251) {
         other++;
-    else if (number == 252)
+    } else if (number == 252) {
         other++;
-    else if (number == 253)
+    } else if (number == 253) {
         other++;
-    else if (number == 254)
+    } else if (number == 254) {
         other++;
-    else if (number == 255)
+    } else if (number == 255) {
         other++;
-    else if (number == 256)
+    } else if (number == 256) {
         other++;
-    else if (number == 257)
+    } else if (number == 257) {
         other++;
-    else if (number == 258)
+    } else if (number == 258) {
         other++;
-    else if (number == 259)
+    } else if (number == 259) {
         other++;
-    else if (number == 260)
+    } else if (number == 260) {
         other++;
-    else if (number == 261)
+    } else if (number == 261) {
         other++;
-    else if (number == 262)
+    } else if (number == 262) {
         other++;
-    else if (number == 263)
+    } else if (number == 263) {
         other++;
-    else if (number == 264)
+    } else if (number == 264) {
         other++;
-    else if (number == 265)
+    } else if (number == 265) {
         other++;
-    else if (number == 266)
+    } else if (number == 266) {
         other++;
-    else if (number == 267)
+    } else if (number == 267) {
         other++;
-    else if (number == 268)
+    } else if (number == 268) {
         other++;
-    else if (number == 269)
+    } else if (number == 269) {
         other++;
-    else if (number == 270)
+    } else if (number == 270) {
         other++;
-    else if (number == 271)
+    } else if (number == 271) {
         other++;
-    else if (number == 272)
+    } else if (number == 272) {
         other++;
-    else if (number == 273)
+    } else if (number == 273) {
         other++;
-    else if (number == 274)
+    } else if (number == 274) {
         other++;
-    else if (number == 275)
+    } else if (number == 275) {
         other++;
-    else if (number == 276)
+    } else if (number == 276) {
         other++;
-    else if (number == 277)
+    } else if (number == 277) {
         other++;
-    else if (number == 278)
+    } else if (number == 278) {
         other++;
-    else if (number == 279)
+    } else if (number == 279) {
         other++;
-    else if (number == 280)
+    } else if (number == 280) {
         other++;
-    else if (number == 281)
+    } else if (number == 281) {
         other++;
-    else if (number == 282)
+    } else if (number == 282) {
         other++;
-    else if (number == 283)
+    } else if (number == 283) {
         other++;
-    else if (number == 284)
+    } else if (number == 284) {
         other++;
-    else if (number == 285)
+    } else if (number == 285) {
         other++;
-    else if (number == 286)
+    } else if (number == 286) {
         other++;
-    else if (number == 287)
+    } else if (number == 287) {
         other++;
-    else if (number == 288)
+    } else if (number == 288) {
         other++;
-    else if (number == 289)
+    } else if (number == 289) {
         other++;
-    else if (number == 290)
+    } else if (number == 290) {
         other++;
-    else if (number == 291)
+    } else if (number == 291) {
         other++;
-    else if (number == 292)
+    } else if (number == 292) {
         other++;
-    else if (number == 293)
+    } else if (number == 293) {
         other++;
-    else if (number == 294)
+    } else if (number == 294) {
         other++;
-    else if (number == 295)
+    } else if (number == 295) {
         other++;
-    else if (number == 296)
+    } else if (number == 296) {
         other++;
-    else if (number == 297)
+    } else if (number == 297) {
         other++;
-    else if (number == 298)
+    } else if (number == 298) {
         other++;
-    else if (number == 299)
+    } else if (number == 299) {
         other++;
-    else if (number == 300)
+    } else if (number == 300) {
         other++;
-    else if (number == 301)
+    } else if (number == 301) {
         other++;
-    else if (number == 302)
+    } else if (number == 302) {
         other++;
-    else if (number == 303)
+    } else if (number == 303) {
         other++;
-    else if (number == 304)
+    } else if (number == 304) {
         other++;
-    else if (number == 305)
+    } else if (number == 305) {
         other++;
-    else if (number == 306)
+    } else if (number == 306) {
         other++;
-    else if (number == 307)
+    } else if (number == 307) {
         other++;
-    else if (number == 308)
+    } else if (number == 308) {
         other++;
-    else if (number == 309)
+    } else if (number == 309) {
         other++;
-    else if (number == 310)
+    } else if (number == 310) {
         other++;
-    else if (number == 311)
+    } else if (number == 311) {
         other++;
-    else if (number == 312)
+    } else if (number == 312) {
         other++;
-    else if (number == 313)
+    } else if (number == 313) {
         other++;
-    else if (number == 314)
+    } else if (number == 314) {
         other++;
-    else if (number == 315)
+    } else if (number == 315) {
         other++;
-    else if (number == 316)
+    } else if (number == 316) {
         other++;
-    else if (number == 317)
+    } else if (number == 317) {
         other++;
-    else if (number == 318)
+    } else if (number == 318) {
         other++;
-    else if (number == 319)
+    } else if (number == 319) {
         other++;
-    else if (number == 320)
+    } else if (number == 320) {
         other++;
-    else if (number == 321)
+    } else if (number == 321) {
         other++;
-    else if (number == 322)
+    } else if (number == 322) {
         other++;
-    else if (number == 323)
+    } else if (number == 323) {
         other++;
-    else if (number == 324)
+    } else if (number == 324) {
         other++;
-    else if (number == 325)
+    } else if (number == 325) {
         other++;
-    else if (number == 326)
+    } else if (number == 326) {
         other++;
-    else if (number == 327)
+    } else if (number == 327) {
         other++;
-    else if (number == 328)
+    } else if (number == 328) {
         other++;
-    else if (number == 329)
+    } else if (number == 329) {
         other++;
-    else if (number == 330)
+    } else if (number == 330) {
         other++;
-    else if (number == 331)
+    } else if (number == 331) {
         other++;
-    else if (number == 332)
+    } else if (number == 332) {
         other++;
-    else if (number == 333)
+    } else if (number == 333) {
         other++;
-    else if (number == 334)
+    } else if (number == 334) {
         other++;
-    else if (number == 335)
+    } else if (number == 335) {
         other++;
-    else if (number == 336)
+    } else if (number == 336) {
         other++;
-    else if (number == 337)
+    } else if (number == 337) {
         other++;
-    else if (number == 338)
+    } else if (number == 338) {
         other++;
-    else if (number == 339)
+    } else if (number == 339) {
         other++;
-    else if (number == 340)
+    } else if (number == 340) {
         other++;
-    else if (number == 341)
+    } else if (number == 341) {
         other++;
-    else if (number == 342)
+    } else if (number == 342) {
         other++;
-    else if (number == 343)
+    } else if (number == 343) {
         other++;
-    else if (number == 344)
+    } else if (number == 344) {
         other++;
-    else if (number == 345)
+    } else if (number == 345) {
         other++;
-    else if (number == 346)
+    } else if (number == 346) {
         other++;
-    else if (number == 347)
+    } else if (number == 347) {
         other++;
-    else if (number == 348)
+    } else if (number == 348) {
         other++;
-    else if (number == 349)
+    } else if (number == 349) {
         other++;
-    else if (number == 350)
+    } else if (number == 350) {
         other++;
-    else if (number == 351)
+    } else if (number == 351) {
         other++;
-    else if (number == 352)
+    } else if (number == 352) {
         other++;
-    else if (number == 353)
+    } else if (number == 353) {
         other++;
-    else if (number == 354)
+    } else if (number == 354) {
         other++;
-    else if (number == 355)
+    } else if (number == 355) {
         other++;
-    else if (number == 356)
+    } else if (number == 356) {
         other++;
-    else if (number == 357)
+    } else if (number == 357) {
         other++;
-    else if (number == 358)
+    } else if (number == 358) {
         other++;
-    else if (number == 359)
+    } else if (number == 359) {
         other++;
-    else if (number == 360)
+    } else if (number == 360) {
         other++;
-    else if (number == 361)
+    } else if (number == 361) {
         other++;
-    else if (number == 362)
+    } else if (number == 362) {
         other++;
-    else if (number == 363)
+    } else if (number == 363) {
         other++;
-    else if (number == 364)
+    } else if (number == 364) {
         other++;
-    else if (number == 365)
+    } else if (number == 365) {
         other++;
-    else if (number == 366)
+    } else if (number == 366) {
         other++;
-    else if (number == 367)
+    } else if (number == 367) {
         other++;
-    else if (number == 368)
+    } else if (number == 368) {
         other++;
-    else if (number == 369)
+    } else if (number == 369) {
         other++;
-    else if (number == 370)
+    } else if (number == 370) {
         other++;
-    else if (number == 371)
+    } else if (number == 371) {
         other++;
-    else if (number == 372)
+    } else if (number == 372) {
         other++;
-    else if (number == 373)
+    } else if (number == 373) {
         other++;
-    else if (number == 374)
+    } else if (number == 374) {
         other++;
-    else if (number == 375)
+    } else if (number == 375) {
         other++;
-    else if (number == 376)
+    } else if (number == 376) {
         other++;
-    else if (number == 377)
+    } else if (number == 377) {
         other++;
-    else if (number == 378)
+    } else if (number == 378) {
         other++;
-    else if (number == 379)
+    } else if (number == 379) {
         other++;
-    else if (number == 380)
+    } else if (number == 380) {
         other++;
-    else if (number == 381)
+    } else if (number == 381) {
         other++;
-    else if (number == 382)
+    } else if (number == 382) {
         other++;
-    else if (number == 383)
+    } else if (number == 383) {
         other++;
-    else if (number == 384)
+    } else if (number == 384) {
         other++;
-    else if (number == 385)
+    } else if (number == 385) {
         other++;
-    else if (number == 386)
+    } else if (number == 386) {
         other++;
-    else if (number == 387)
+    } else if (number == 387) {
         other++;
-    else if (number == 388)
+    } else if (number == 388) {
         other++;
-    else if (number == 389)
+    } else if (number == 389) {
         other++;
-    else if (number == 390)
+    } else if (number == 390) {
         other++;
-    else if (number == 391)
+    } else if (number == 391) {
         other++;
-    else if (number == 392)
+    } else if (number == 392) {
         other++;
-    else if (number == 393)
+    } else if (number == 393) {
         other++;
-    else if (number == 394)
+    } else if (number == 394) {
         other++;
-    else if (number == 395)
+    } else if (number == 395) {
         other++;
-    else if (number == 396)
+    } else if (number == 396) {
         other++;
-    else if (number == 397)
+    } else if (number == 397) {
         other++;
-    else if (number == 398)
+    } else if (number == 398) {
         other++;
-    else if (number == 399)
+    } else if (number == 399) {
         other++;
-    else if (number == 400)
+    } else if (number == 400) {
         other++;
-    else if (number == 401)
+    } else if (number == 401) {
         other++;
-    else if (number == 402)
+    } else if (number == 402) {
         other++;
-    else if (number == 403)
+    } else if (number == 403) {
         other++;
-    else if (number == 404)
+    } else if (number == 404) {
         other++;
-    else if (number == 405)
+    } else if (number == 405) {
         other++;
-    else if (number == 406)
+    } else if (number == 406) {
         other++;
-    else if (number == 407)
+    } else if (number == 407) {
         other++;
-    else if (number == 408)
+    } else if (number == 408) {
         other++;
-    else if (number == 409)
+    } else if (number == 409) {
         other++;
-    else if (number == 410)
+    } else if (number == 410) {
         other++;
-    else if (number == 411)
+    } else if (number == 411) {
         other++;
-    else if (number == 412)
+    } else if (number == 412) {
         other++;
-    else if (number == 413)
+    } else if (number == 413) {
         other++;
-    else if (number == 414)
+    } else if (number == 414) {
         other++;
-    else if (number == 415)
+    } else if (number == 415) {
         other++;
-    else if (number == 416)
+    } else if (number == 416) {
         other++;
-    else if (number == 417)
+    } else if (number == 417) {
         other++;
-    else if (number == 418)
+    } else if (number == 418) {
         other++;
-    else if (number == 419)
+    } else if (number == 419) {
         other++;
-    else if (number == 420)
+    } else if (number == 420) {
         other++;
-    else if (number == 421)
+    } else if (number == 421) {
         other++;
-    else if (number == 422)
+    } else if (number == 422) {
         other++;
-    else if (number == 423)
+    } else if (number == 423) {
         other++;
-    else if (number == 424)
+    } else if (number == 424) {
         other++;
-    else if (number == 425)
+    } else if (number == 425) {
         other++;
-    else if (number == 426)
+    } else if (number == 426) {
         other++;
-    else if (number == 427)
+    } else if (number == 427) {
         other++;
-    else if (number == 428)
+    } else if (number == 428) {
         other++;
-    else if (number == 429)
+    } else if (number == 429) {
         other++;
-    else if (number == 430)
+    } else if (number == 430) {
         other++;
-    else if (number == 431)
+    } else if (number == 431) {
         other++;
-    else if (number == 432)
+    } else if (number == 432) {
         other++;
-    else if (number == 433)
+    } else if (number == 433) {
         other++;
-    else if (number == 434)
+    } else if (number == 434) {
         other++;
-    else if (number == 435)
+    } else if (number == 435) {
         other++;
-    else if (number == 436)
+    } else if (number == 436) {
         other++;
-    else if (number == 437)
+    } else if (number == 437) {
         other++;
-    else if (number == 438)
+    } else if (number == 438) {
         other++;
-    else if (number == 439)
+    } else if (number == 439) {
         other++;
-    else if (number == 440)
+    } else if (number == 440) {
         other++;
-    else if (number == 441)
+    } else if (number == 441) {
         other++;
-    else if (number == 442)
+    } else if (number == 442) {
         other++;
-    else if (number == 443)
+    } else if (number == 443) {
         other++;
-    else if (number == 444)
+    } else if (number == 444) {
         other++;
-    else if (number == 445)
+    } else if (number == 445) {
         other++;
-    else if (number == 446)
+    } else if (number == 446) {
         other++;
-    else if (number == 447)
+    } else if (number == 447) {
         other++;
-    else if (number == 448)
+    } else if (number == 448) {
         other++;
-    else if (number == 449)
+    } else if (number == 449) {
         other++;
-    else if (number == 450)
+    } else if (number == 450) {
         other++;
-    else if (number == 451)
+    } else if (number == 451) {
         other++;
-    else if (number == 452)
+    } else if (number == 452) {
         other++;
-    else if (number == 453)
+    } else if (number == 453) {
         other++;
-    else if (number == 454)
+    } else if (number == 454) {
         other++;
-    else if (number == 455)
+    } else if (number == 455) {
         other++;
-    else if (number == 456)
+    } else if (number == 456) {
         other++;
-    else if (number == 457)
+    } else if (number == 457) {
         other++;
-    else if (number == 458)
+    } else if (number == 458) {
         other++;
-    else if (number == 459)
+    } else if (number == 459) {
         other++;
-    else if (number == 460)
+    } else if (number == 460) {
         other++;
-    else if (number == 461)
+    } else if (number == 461) {
         other++;
-    else if (number == 462)
+    } else if (number == 462) {
         other++;
-    else if (number == 463)
+    } else if (number == 463) {
         other++;
-    else if (number == 464)
+    } else if (number == 464) {
         other++;
-    else if (number == 465)
+    } else if (number == 465) {
         other++;
-    else if (number == 466)
+    } else if (number == 466) {
         other++;
-    else if (number == 467)
+    } else if (number == 467) {
         other++;
-    else if (number == 468)
+    } else if (number == 468) {
         other++;
-    else if (number == 469)
+    } else if (number == 469) {
         other++;
-    else if (number == 470)
+    } else if (number == 470) {
         other++;
-    else if (number == 471)
+    } else if (number == 471) {
         other++;
-    else if (number == 472)
+    } else if (number == 472) {
         other++;
-    else if (number == 473)
+    } else if (number == 473) {
         other++;
-    else if (number == 474)
+    } else if (number == 474) {
         other++;
-    else if (number == 475)
+    } else if (number == 475) {
         other++;
-    else if (number == 476)
+    } else if (number == 476) {
         other++;
-    else if (number == 477)
+    } else if (number == 477) {
         other++;
-    else if (number == 478)
+    } else if (number == 478) {
         other++;
-    else if (number == 479)
+    } else if (number == 479) {
         other++;
-    else if (number == 480)
+    } else if (number == 480) {
         other++;
-    else if (number == 481)
+    } else if (number == 481) {
         other++;
-    else if (number == 482)
+    } else if (number == 482) {
         other++;
-    else if (number == 483)
+    } else if (number == 483) {
         other++;
-    else if (number == 484)
+    } else if (number == 484) {
         other++;
-    else if (number == 485)
+    } else if (number == 485) {
         other++;
-    else if (number == 486)
+    } else if (number == 486) {
         other++;
-    else if (number == 487)
+    } else if (number == 487) {
         other++;
-    else if (number == 488)
+    } else if (number == 488) {
         other++;
-    else if (number == 489)
+    } else if (number == 489) {
         other++;
-    else if (number == 490)
+    } else if (number == 490) {
         other++;
-    else if (number == 491)
+    } else if (number == 491) {
         other++;
-    else if (number == 492)
+    } else if (number == 492) {
         other++;
-    else if (number == 493)
+    } else if (number == 493) {
         other++;
-    else if (number == 494)
+    } else if (number == 494) {
         other++;
-    else if (number == 495)
+    } else if (number == 495) {
         other++;
-    else if (number == 496)
+    } else if (number == 496) {
         other++;
-    else if (number == 497)
+    } else if (number == 497) {
         other++;
-    else if (number == 498)
+    } else if (number == 498) {
         other++;
-    else if (number == 499)
+    } else if (number == 499) {
         other++;
-    else if (number == 500)
+    } else if (number == 500) {
         other++;
-    else if (number == 501)
+    } else if (number == 501) {
         other++;
-    else if (number == 502)
+    } else if (number == 502) {
         other++;
-    else if (number == 503)
+    } else if (number == 503) {
         other++;
-    else if (number == 504)
+    } else if (number == 504) {
         other++;
-    else if (number == 505)
+    } else if (number == 505) {
         other++;
-    else if (number == 506)
+    } else if (number == 506) {
         other++;
-    else if (number == 507)
+    } else if (number == 507) {
         other++;
-    else if (number == 508)
+    } else if (number == 508) {
         other++;
-    else if (number == 509)
+    } else if (number == 509) {
         other++;
-    else if (number == 510)
+    } else if (number == 510) {
         other++;
-    else if (number == 511)
+    } else if (number == 511) {
         other++;
-    else if (number == 512)
+    } else if (number == 512) {
         other++;
-    else if (number == 513)
+    } else if (number == 513) {
         other++;
-    else if (number == 514)
+    } else if (number == 514) {
         other++;
-    else if (number == 515)
+    } else if (number == 515) {
         other++;
-    else if (number == 516)
+    } else if (number == 516) {
         other++;
-    else if (number == 517)
+    } else if (number == 517) {
         other++;
-    else if (number == 518)
+    } else if (number == 518) {
         other++;
-    else if (number == 519)
+    } else if (number == 519) {
         other++;
-    else if (number == 520)
+    } else if (number == 520) {
         other++;
-    else if (number == 521)
+    } else if (number == 521) {
         other++;
-    else if (number == 522)
+    } else if (number == 522) {
         other++;
-    else if (number == 523)
+    } else if (number == 523) {
         other++;
-    else if (number == 524)
+    } else if (number == 524) {
         other++;
-    else if (number == 525)
+    } else if (number == 525) {
         other++;
-    else if (number == 526)
+    } else if (number == 526) {
         other++;
-    else if (number == 527)
+    } else if (number == 527) {
         other++;
-    else if (number == 528)
+    } else if (number == 528) {
         other++;
-    else if (number == 529)
+    } else if (number == 529) {
         other++;
-    else if (number == 530)
+    } else if (number == 530) {
         other++;
-    else if (number == 531)
+    } else if (number == 531) {
         other++;
-    else if (number == 532)
+    } else if (number == 532) {
         other++;
-    else if (number == 533)
+    } else if (number == 533) {
         other++;
-    else if (number == 534)
+    } else if (number == 534) {
         other++;
-    else if (number == 535)
+    } else if (number == 535) {
         other++;
-    else if (number == 536)
+    } else if (number == 536) {
         other++;
-    else if (number == 537)
+    } else if (number == 537) {
         other++;
-    else if (number == 538)
+    } else if (number == 538) {
         other++;
-    else if (number == 539)
+    } else if (number == 539) {
         other++;
-    else if (number == 540)
+    } else if (number == 540) {
         other++;
-    else if (number == 541)
+    } else if (number == 541) {
         other++;
-    else if (number == 542)
+    } else if (number == 542) {
         other++;
-    else if (number == 543)
+    } else if (number == 543) {
         other++;
-    else if (number == 544)
+    } else if (number == 544) {
         other++;
-    else if (number == 545)
+    } else if (number == 545) {
         other++;
-    else if (number == 546)
+    } else if (number == 546) {
         other++;
-    else if (number == 547)
+    } else if (number == 547) {
         other++;
-    else if (number == 548)
+    } else if (number == 548) {
         other++;
-    else if (number == 549)
+    } else if (number == 549) {
         other++;
-    else if (number == 550)
+    } else if (number == 550) {
         other++;
-    else if (number == 551)
+    } else if (number == 551) {
         other++;
-    else if (number == 552)
+    } else if (number == 552) {
         other++;
-    else if (number == 553)
+    } else if (number == 553) {
         other++;
-    else if (number == 554)
+    } else if (number == 554) {
         other++;
-    else if (number == 555)
+    } else if (number == 555) {
         other++;
-    else if (number == 556)
+    } else if (number == 556) {
         other++;
-    else if (number == 557)
+    } else if (number == 557) {
         other++;
-    else if (number == 558)
+    } else if (number == 558) {
         other++;
-    else if (number == 559)
+    } else if (number == 559) {
         other++;
-    else if (number == 560)
+    } else if (number == 560) {
         other++;
-    else if (number == 561)
+    } else if (number == 561) {
         other++;
-    else if (number == 562)
+    } else if (number == 562) {
         other++;
-    else if (number == 563)
+    } else if (number == 563) {
         other++;
-    else if (number == 564)
+    } else if (number == 564) {
         other++;
-    else if (number == 565)
+    } else if (number == 565) {
         other++;
-    else if (number == 566)
+    } else if (number == 566) {
         other++;
-    else if (number == 567)
+    } else if (number == 567) {
         other++;
-    else if (number == 568)
+    } else if (number == 568) {
         other++;
-    else if (number == 569)
+    } else if (number == 569) {
         other++;
-    else if (number == 570)
+    } else if (number == 570) {
         other++;
-    else if (number == 571)
+    } else if (number == 571) {
         other++;
-    else if (number == 572)
+    } else if (number == 572) {
         other++;
-    else if (number == 573)
+    } else if (number == 573) {
         other++;
-    else if (number == 574)
+    } else if (number == 574) {
         other++;
-    else if (number == 575)
+    } else if (number == 575) {
         other++;
-    else if (number == 576)
+    } else if (number == 576) {
         other++;
-    else if (number == 577)
+    } else if (number == 577) {
         other++;
-    else if (number == 578)
+    } else if (number == 578) {
         other++;
-    else if (number == 579)
+    } else if (number == 579) {
         other++;
-    else if (number == 580)
+    } else if (number == 580) {
         other++;
-    else if (number == 581)
+    } else if (number == 581) {
         other++;
-    else if (number == 582)
+    } else if (number == 582) {
         other++;
-    else if (number == 583)
+    } else if (number == 583) {
         other++;
-    else if (number == 584)
+    } else if (number == 584) {
         other++;
-    else if (number == 585)
+    } else if (number == 585) {
         other++;
-    else if (number == 586)
+    } else if (number == 586) {
         other++;
-    else if (number == 587)
+    } else if (number == 587) {
         other++;
-    else if (number == 588)
+    } else if (number == 588) {
         other++;
-    else if (number == 589)
+    } else if (number == 589) {
         other++;
-    else if (number == 590)
+    } else if (number == 590) {
         other++;
-    else if (number == 591)
+    } else if (number == 591) {
         other++;
-    else if (number == 592)
+    } else if (number == 592) {
         other++;
-    else if (number == 593)
+    } else if (number == 593) {
         other++;
-    else if (number == 594)
+    } else if (number == 594) {
         other++;
-    else if (number == 595)
+    } else if (number == 595) {
         other++;
-    else if (number == 596)
+    } else if (number == 596) {
         other++;
-    else if (number == 597)
+    } else if (number == 597) {
         other++;
-    else if (number == 598)
+    } else if (number == 598) {
         other++;
-    else if (number == 599)
+    } else if (number == 599) {
         other++;
-    else if (number == 600)
+    } else if (number == 600) {
         other++;
-    else if (number == 601)
+    } else if (number == 601) {
         other++;
-    else if (number == 602)
+    } else if (number == 602) {
         other++;
-    else if (number == 603)
+    } else if (number == 603) {
         other++;
-    else if (number == 604)
+    } else if (number == 604) {
         other++;
-    else if (number == 605)
+    } else if (number == 605) {
         other++;
-    else if (number == 606)
+    } else if (number == 606) {
         other++;
-    else if (number == 607)
+    } else if (number == 607) {
         other++;
-    else if (number == 608)
+    } else if (number == 608) {
         other++;
-    else if (number == 609)
+    } else if (number == 609) {
         other++;
-    else if (number == 610)
+    } else if (number == 610) {
         other++;
-    else if (number == 611)
+    } else if (number == 611) {
         other++;
-    else if (number == 612)
+    } else if (number == 612) {
         other++;
-    else if (number == 613)
+    } else if (number == 613) {
         other++;
-    else if (number == 614)
+    } else if (number == 614) {
         other++;
-    else if (number == 615)
+    } else if (number == 615) {
         other++;
-    else if (number == 616)
+    } else if (number == 616) {
         other++;
-    else if (number == 617)
+    } else if (number == 617) {
         other++;
-    else if (number == 618)
+    } else if (number == 618) {
         other++;
-    else if (number == 619)
+    } else if (number == 619) {
         other++;
-    else if (number == 620)
+    } else if (number == 620) {
         other++;
-    else if (number == 621)
+    } else if (number == 621) {
         other++;
-    else if (number == 622)
+    } else if (number == 622) {
         other++;
-    else if (number == 623)
+    } else if (number == 623) {
         other++;
-    else if (number == 624)
+    } else if (number == 624) {
         other++;
-    else if (number == 625)
+    } else if (number == 625) {
         other++;
-    else if (number == 626)
+    } else if (number == 626) {
         other++;
-    else if (number == 627)
+    } else if (number == 627) {
         other++;
-    else if (number == 628)
+    } else if (number == 628) {
         other++;
-    else if (number == 629)
+    } else if (number == 629) {
         other++;
-    else if (number == 630)
+    } else if (number == 630) {
         other++;
-    else if (number == 631)
+    } else if (number == 631) {
         other++;
-    else if (number == 632)
+    } else if (number == 632) {
         other++;
-    else if (number == 633)
+    } else if (number == 633) {
         other++;
-    else if (number == 634)
+    } else if (number == 634) {
         other++;
-    else if (number == 635)
+    } else if (number == 635) {
         other++;
-    else if (number == 636)
+    } else if (number == 636) {
         other++;
-    else if (number == 637)
+    } else if (number == 637) {
         other++;
-    else if (number == 638)
+    } else if (number == 638) {
         other++;
-    else if (number == 639)
+    } else if (number == 639) {
         other++;
-    else if (number == 640)
+    } else if (number == 640) {
         other++;
-    else if (number == 641)
+    } else if (number == 641) {
         other++;
-    else if (number == 642)
+    } else if (number == 642) {
         other++;
-    else if (number == 643)
+    } else if (number == 643) {
         other++;
-    else if (number == 644)
+    } else if (number == 644) {
         other++;
-    else if (number == 645)
+    } else if (number == 645) {
         other++;
-    else if (number == 646)
+    } else if (number == 646) {
         other++;
-    else if (number == 647)
+    } else if (number == 647) {
         other++;
-    else if (number == 648)
+    } else if (number == 648) {
         other++;
-    else if (number == 649)
+    } else if (number == 649) {
         other++;
-    else if (number == 650)
+    } else if (number == 650) {
         other++;
-    else if (number == 651)
+    } else if (number == 651) {
         other++;
-    else if (number == 652)
+    } else if (number == 652) {
         other++;
-    else if (number == 653)
+    } else if (number == 653) {
         other++;
-    else if (number == 654)
+    } else if (number == 654) {
         other++;
-    else if (number == 655)
+    } else if (number == 655) {
         other++;
-    else if (number == 656)
+    } else if (number == 656) {
         other++;
-    else if (number == 657)
+    } else if (number == 657) {
         other++;
-    else if (number == 658)
+    } else if (number == 658) {
         other++;
-    else if (number == 659)
+    } else if (number == 659) {
         other++;
-    else if (number == 660)
+    } else if (number == 660) {
         other++;
-    else if (number == 661)
+    } else if (number == 661) {
         other++;
-    else if (number == 662)
+    } else if (number == 662) {
         other++;
-    else if (number == 663)
+    } else if (number == 663) {
         other++;
-    else if (number == 664)
+    } else if (number == 664) {
         other++;
-    else if (number == 665)
+    } else if (number == 665) {
         other++;
-    else if (number == 666)
+    } else if (number == 666) {
         other++;
-    else if (number == 667)
+    } else if (number == 667) {
         other++;
-    else if (number == 668)
+    } else if (number == 668) {
         other++;
-    else if (number == 669)
+    } else if (number == 669) {
         other++;
-    else if (number == 670)
+    } else if (number == 670) {
         other++;
-    else if (number == 671)
+    } else if (number == 671) {
         other++;
-    else if (number == 672)
+    } else if (number == 672) {
         other++;
-    else if (number == 673)
+    } else if (number == 673) {
         other++;
-    else if (number == 674)
+    } else if (number == 674) {
         other++;
-    else if (number == 675)
+    } else if (number == 675) {
         other++;
-    else if (number == 676)
+    } else if (number == 676) {
         other++;
-    else if (number == 677)
+    } else if (number == 677) {
         other++;
-    else if (number == 678)
+    } else if (number == 678) {
         other++;
-    else if (number == 679)
+    } else if (number == 679) {
         other++;
-    else if (number == 680)
+    } else if (number == 680) {
         other++;
-    else if (number == 681)
+    } else if (number == 681) {
         other++;
-    else if (number == 682)
+    } else if (number == 682) {
         other++;
-    else if (number == 683)
+    } else if (number == 683) {
         other++;
-    else if (number == 684)
+    } else if (number == 684) {
         other++;
-    else if (number == 685)
+    } else if (number == 685) {
         other++;
-    else if (number == 686)
+    } else if (number == 686) {
         other++;
-    else if (number == 687)
+    } else if (number == 687) {
         other++;
-    else if (number == 688)
+    } else if (number == 688) {
         other++;
-    else if (number == 689)
+    } else if (number == 689) {
         other++;
-    else if (number == 690)
+    } else if (number == 690) {
         other++;
-    else if (number == 691)
+    } else if (number == 691) {
         other++;
-    else if (number == 692)
+    } else if (number == 692) {
         other++;
-    else if (number == 693)
+    } else if (number == 693) {
         other++;
-    else if (number == 694)
+    } else if (number == 694) {
         other++;
-    else if (number == 695)
+    } else if (number == 695) {
         other++;
-    else if (number == 696)
+    } else if (number == 696) {
         other++;
-    else if (number == 697)
+    } else if (number == 697) {
         other++;
-    else if (number == 698)
+    } else if (number == 698) {
         other++;
-    else if (number == 699)
+    } else if (number == 699) {
         other++;
-    else if (number == 700)
+    } else if (number == 700) {
         other++;
-    else if (number == 701)
+    } else if (number == 701) {
         other++;
-    else if (number == 702)
+    } else if (number == 702) {
         other++;
-    else if (number == 703)
+    } else if (number == 703) {
         other++;
-    else if (number == 704)
+    } else if (number == 704) {
         other++;
-    else if (number == 705)
+    } else if (number == 705) {
         other++;
-    else if (number == 706)
+    } else if (number == 706) {
         other++;
-    else if (number == 707)
+    } else if (number == 707) {
         other++;
-    else if (number == 708)
+    } else if (number == 708) {
         other++;
-    else if (number == 709)
+    } else if (number == 709) {
         other++;
-    else if (number == 710)
+    } else if (number == 710) {
         other++;
-    else if (number == 711)
+    } else if (number == 711) {
         other++;
-    else if (number == 712)
+    } else if (number == 712) {
         other++;
-    else if (number == 713)
+    } else if (number == 713) {
         other++;
-    else if (number == 714)
+    } else if (number == 714) {
         other++;
-    else if (number == 715)
+    } else if (number == 715) {
         other++;
-    else if (number == 716)
+    } else if (number == 716) {
         other++;
-    else if (number == 717)
+    } else if (number == 717) {
         other++;
-    else if (number == 718)
+    } else if (number == 718) {
         other++;
-    else if (number == 719)
+    } else if (number == 719) {
         other++;
-    else if (number == 720)
+    } else if (number == 720) {
         other++;
-    else if (number == 721)
+    } else if (number == 721) {
         other++;
-    else if (number == 722)
+    } else if (number == 722) {
         other++;
-    else if (number == 723)
+    } else if (number == 723) {
         other++;
-    else if (number == 724)
+    } else if (number == 724) {
         other++;
-    else if (number == 725)
+    } else if (number == 725) {
         other++;
-    else if (number == 726)
+    } else if (number == 726) {
         other++;
-    else if (number == 727)
+    } else if (number == 727) {
         other++;
-    else if (number == 728)
+    } else if (number == 728) {
         other++;
-    else if (number == 729)
+    } else if (number == 729) {
         other++;
-    else if (number == 730)
+    } else if (number == 730) {
         other++;
-    else if (number == 731)
+    } else if (number == 731) {
         other++;
-    else if (number == 732)
+    } else if (number == 732) {
         other++;
-    else if (number == 733)
+    } else if (number == 733) {
         other++;
-    else if (number == 734)
+    } else if (number == 734) {
         other++;
-    else if (number == 735)
+    } else if (number == 735) {
         other++;
-    else if (number == 736)
+    } else if (number == 736) {
         other++;
-    else if (number == 737)
+    } else if (number == 737) {
         other++;
-    else if (number == 738)
+    } else if (number == 738) {
         other++;
-    else if (number == 739)
+    } else if (number == 739) {
         other++;
-    else if (number == 740)
+    } else if (number == 740) {
         other++;
-    else if (number == 741)
+    } else if (number == 741) {
         other++;
-    else if (number == 742)
+    } else if (number == 742) {
         other++;
-    else if (number == 743)
+    } else if (number == 743) {
         other++;
-    else if (number == 744)
+    } else if (number == 744) {
         other++;
-    else if (number == 745)
+    } else if (number == 745) {
         other++;
-    else if (number == 746)
+    } else if (number == 746) {
         other++;
-    else if (number == 747)
+    } else if (number == 747) {
         other++;
-    else if (number == 748)
+    } else if (number == 748) {
         other++;
-    else if (number == 749)
+    } else if (number == 749) {
         other++;
-    else if (number == 750)
+    } else if (number == 750) {
         other++;
-    else if (number == 751)
+    } else if (number == 751) {
         other++;
-    else if (number == 752)
+    } else if (number == 752) {
         other++;
-    else if (number == 753)
+    } else if (number == 753) {
         other++;
-    else if (number == 754)
+    } else if (number == 754) {
         other++;
-    else if (number == 755)
+    } else if (number == 755) {
         other++;
-    else if (number == 756)
+    } else if (number == 756) {
         other++;
-    else if (number == 757)
+    } else if (number == 757) {
         other++;
-    else if (number == 758)
+    } else if (number == 758) {
         other++;
-    else if (number == 759)
+    } else if (number == 759) {
         other++;
-    else if (number == 760)
+    } else if (number == 760) {
         other++;
-    else if (number == 761)
+    } else if (number == 761) {
         other++;
-    else if (number == 762)
+    } else if (number == 762) {
         other++;
-    else if (number == 763)
+    } else if (number == 763) {
         other++;
-    else if (number == 764)
+    } else if (number == 764) {
         other++;
-    else if (number == 765)
+    } else if (number == 765) {
         other++;
-    else if (number == 766)
+    } else if (number == 766) {
         other++;
-    else if (number == 767)
+    } else if (number == 767) {
         other++;
-    else if (number == 768)
+    } else if (number == 768) {
         other++;
-    else if (number == 769)
+    } else if (number == 769) {
         other++;
-    else if (number == 770)
+    } else if (number == 770) {
         other++;
-    else if (number == 771)
+    } else if (number == 771) {
         other++;
-    else if (number == 772)
+    } else if (number == 772) {
         other++;
-    else if (number == 773)
+    } else if (number == 773) {
         other++;
-    else if (number == 774)
+    } else if (number == 774) {
         other++;
-    else if (number == 775)
+    } else if (number == 775) {
         other++;
-    else if (number == 776)
+    } else if (number == 776) {
         other++;
-    else if (number == 777)
+    } else if (number == 777) {
         other++;
-    else if (number == 778)
+    } else if (number == 778) {
         other++;
-    else if (number == 779)
+    } else if (number == 779) {
         other++;
-    else if (number == 780)
+    } else if (number == 780) {
         other++;
-    else if (number == 781)
+    } else if (number == 781) {
         other++;
-    else if (number == 782)
+    } else if (number == 782) {
         other++;
-    else if (number == 783)
+    } else if (number == 783) {
         other++;
-    else if (number == 784)
+    } else if (number == 784) {
         other++;
-    else if (number == 785)
+    } else if (number == 785) {
         other++;
-    else if (number == 786)
+    } else if (number == 786) {
         other++;
-    else if (number == 787)
+    } else if (number == 787) {
         other++;
-    else if (number == 788)
+    } else if (number == 788) {
         other++;
-    else if (number == 789)
+    } else if (number == 789) {
         other++;
-    else if (number == 790)
+    } else if (number == 790) {
         other++;
-    else if (number == 791)
+    } else if (number == 791) {
         other++;
-    else if (number == 792)
+    } else if (number == 792) {
         other++;
-    else if (number == 793)
+    } else if (number == 793) {
         other++;
-    else if (number == 794)
+    } else if (number == 794) {
         other++;
-    else if (number == 795)
+    } else if (number == 795) {
         other++;
-    else if (number == 796)
+    } else if (number == 796) {
         other++;
-    else if (number == 797)
+    } else if (number == 797) {
         other++;
-    else if (number == 798)
+    } else if (number == 798) {
         other++;
-    else if (number == 799)
+    } else if (number == 799) {
         other++;
-    else if (number == 800)
+    } else if (number == 800) {
         other++;
-    else if (number == 801)
+    } else if (number == 801) {
         other++;
-    else if (number == 802)
+    } else if (number == 802) {
         other++;
-    else if (number == 803)
+    } else if (number == 803) {
         other++;
-    else if (number == 804)
+    } else if (number == 804) {
         other++;
-    else if (number == 805)
+    } else if (number == 805) {
         other++;
-    else if (number == 806)
+    } else if (number == 806) {
         other++;
-    else if (number == 807)
+    } else if (number == 807) {
         other++;
-    else if (number == 808)
+    } else if (number == 808) {
         other++;
-    else if (number == 809)
+    } else if (number == 809) {
         other++;
-    else if (number == 810)
+    } else if (number == 810) {
         other++;
-    else if (number == 811)
+    } else if (number == 811) {
         other++;
-    else if (number == 812)
+    } else if (number == 812) {
         other++;
-    else if (number == 813)
+    } else if (number == 813) {
         other++;
-    else if (number == 814)
+    } else if (number == 814) {
         other++;
-    else if (number == 815)
+    } else if (number == 815) {
         other++;
-    else if (number == 816)
+    } else if (number == 816) {
         other++;
-    else if (number == 817)
+    } else if (number == 817) {
         other++;
-    else if (number == 818)
+    } else if (number == 818) {
         other++;
-    else if (number == 819)
+    } else if (number == 819) {
         other++;
-    else if (number == 820)
+    } else if (number == 820) {
         other++;
-    else if (number == 821)
+    } else if (number == 821) {
         other++;
-    else if (number == 822)
+    } else if (number == 822) {
         other++;
-    else if (number == 823)
+    } else if (number == 823) {
         other++;
-    else if (number == 824)
+    } else if (number == 824) {
         other++;
-    else if (number == 825)
+    } else if (number == 825) {
         other++;
-    else if (number == 826)
+    } else if (number == 826) {
         other++;
-    else if (number == 827)
+    } else if (number == 827) {
         other++;
-    else if (number == 828)
+    } else if (number == 828) {
         other++;
-    else if (number == 829)
+    } else if (number == 829) {
         other++;
-    else if (number == 830)
+    } else if (number == 830) {
         other++;
-    else if (number == 831)
+    } else if (number == 831) {
         other++;
-    else if (number == 832)
+    } else if (number == 832) {
         other++;
-    else if (number == 833)
+    } else if (number == 833) {
         other++;
-    else if (number == 834)
+    } else if (number == 834) {
         other++;
-    else if (number == 835)
+    } else if (number == 835) {
         other++;
-    else if (number == 836)
+    } else if (number == 836) {
         other++;
-    else if (number == 837)
+    } else if (number == 837) {
         other++;
-    else if (number == 838)
+    } else if (number == 838) {
         other++;
-    else if (number == 839)
+    } else if (number == 839) {
         other++;
-    else if (number == 840)
+    } else if (number == 840) {
         other++;
-    else if (number == 841)
+    } else if (number == 841) {
         other++;
-    else if (number == 842)
+    } else if (number == 842) {
         other++;
-    else if (number == 843)
+    } else if (number == 843) {
         other++;
-    else if (number == 844)
+    } else if (number == 844) {
         other++;
-    else if (number == 845)
+    } else if (number == 845) {
         other++;
-    else if (number == 846)
+    } else if (number == 846) {
         other++;
-    else if (number == 847)
+    } else if (number == 847) {
         other++;
-    else if (number == 848)
+    } else if (number == 848) {
         other++;
-    else if (number == 849)
+    } else if (number == 849) {
         other++;
-    else if (number == 850)
+    } else if (number == 850) {
         other++;
-    else if (number == 851)
+    } else if (number == 851) {
         other++;
-    else if (number == 852)
+    } else if (number == 852) {
         other++;
-    else if (number == 853)
+    } else if (number == 853) {
         other++;
-    else if (number == 854)
+    } else if (number == 854) {
         other++;
-    else if (number == 855)
+    } else if (number == 855) {
         other++;
-    else if (number == 856)
+    } else if (number == 856) {
         other++;
-    else if (number == 857)
+    } else if (number == 857) {
         other++;
-    else if (number == 858)
+    } else if (number == 858) {
         other++;
-    else if (number == 859)
+    } else if (number == 859) {
         other++;
-    else if (number == 860)
+    } else if (number == 860) {
         other++;
-    else if (number == 861)
+    } else if (number == 861) {
         other++;
-    else if (number == 862)
+    } else if (number == 862) {
         other++;
-    else if (number == 863)
+    } else if (number == 863) {
         other++;
-    else if (number == 864)
+    } else if (number == 864) {
         other++;
-    else if (number == 865)
+    } else if (number == 865) {
         other++;
-    else if (number == 866)
+    } else if (number == 866) {
         other++;
-    else if (number == 867)
+    } else if (number == 867) {
         other++;
-    else if (number == 868)
+    } else if (number == 868) {
         other++;
-    else if (number == 869)
+    } else if (number == 869) {
         other++;
-    else if (number == 870)
+    } else if (number == 870) {
         other++;
-    else if (number == 871)
+    } else if (number == 871) {
         other++;
-    else if (number == 872)
+    } else if (number == 872) {
         other++;
-    else if (number == 873)
+    } else if (number == 873) {
         other++;
-    else if (number == 874)
+    } else if (number == 874) {
         other++;
-    else if (number == 875)
+    } else if (number == 875) {
         other++;
-    else if (number == 876)
+    } else if (number == 876) {
         other++;
-    else if (number == 877)
+    } else if (number == 877) {
         other++;
-    else if (number == 878)
+    } else if (number == 878) {
         other++;
-    else if (number == 879)
+    } else if (number == 879) {
         other++;
-    else if (number == 880)
+    } else if (number == 880) {
         other++;
-    else if (number == 881)
+    } else if (number == 881) {
         other++;
-    else if (number == 882)
+    } else if (number == 882) {
         other++;
-    else if (number == 883)
+    } else if (number == 883) {
         other++;
-    else if (number == 884)
+    } else if (number == 884) {
         other++;
-    else if (number == 885)
+    } else if (number == 885) {
         other++;
-    else if (number == 886)
+    } else if (number == 886) {
         other++;
-    else if (number == 887)
+    } else if (number == 887) {
         other++;
-    else if (number == 888)
+    } else if (number == 888) {
         other++;
-    else if (number == 889)
+    } else if (number == 889) {
         other++;
-    else if (number == 890)
+    } else if (number == 890) {
         other++;
-    else if (number == 891)
+    } else if (number == 891) {
         other++;
-    else if (number == 892)
+    } else if (number == 892) {
         other++;
-    else if (number == 893)
+    } else if (number == 893) {
         other++;
-    else if (number == 894)
+    } else if (number == 894) {
         other++;
-    else if (number == 895)
+    } else if (number == 895) {
         other++;
-    else if (number == 896)
+    } else if (number == 896) {
         other++;
-    else if (number == 897)
+    } else if (number == 897) {
         other++;
-    else if (number == 898)
+    } else if (number == 898) {
         other++;
-    else if (number == 899)
+    } else if (number == 899) {
         other++;
-    else if (number == 900)
+    } else if (number == 900) {
         other++;
-    else if (number == 901)
+    } else if (number == 901) {
         other++;
-    else if (number == 902)
+    } else if (number == 902) {
         other++;
-    else if (number == 903)
+    } else if (number == 903) {
         other++;
-    else if (number == 904)
+    } else if (number == 904) {
         other++;
-    else if (number == 905)
+    } else if (number == 905) {
         other++;
-    else if (number == 906)
+    } else if (number == 906) {
         other++;
-    else if (number == 907)
+    } else if (number == 907) {
         other++;
-    else if (number == 908)
+    } else if (number == 908) {
         other++;
-    else if (number == 909)
+    } else if (number == 909) {
         other++;
-    else if (number == 910)
+    } else if (number == 910) {
         other++;
-    else if (number == 911)
+    } else if (number == 911) {
         other++;
-    else if (number == 912)
+    } else if (number == 912) {
         other++;
-    else if (number == 913)
+    } else if (number == 913) {
         other++;
-    else if (number == 914)
+    } else if (number == 914) {
         other++;
-    else if (number == 915)
+    } else if (number == 915) {
         other++;
-    else if (number == 916)
+    } else if (number == 916) {
         other++;
-    else if (number == 917)
+    } else if (number == 917) {
         other++;
-    else if (number == 918)
+    } else if (number == 918) {
         other++;
-    else if (number == 919)
+    } else if (number == 919) {
         other++;
-    else if (number == 920)
+    } else if (number == 920) {
         other++;
-    else if (number == 921)
+    } else if (number == 921) {
         other++;
-    else if (number == 922)
+    } else if (number == 922) {
         other++;
-    else if (number == 923)
+    } else if (number == 923) {
         other++;
-    else if (number == 924)
+    } else if (number == 924) {
         other++;
-    else if (number == 925)
+    } else if (number == 925) {
         other++;
-    else if (number == 926)
+    } else if (number == 926) {
         other++;
-    else if (number == 927)
+    } else if (number == 927) {
         other++;
-    else if (number == 928)
+    } else if (number == 928) {
         other++;
-    else if (number == 929)
+    } else if (number == 929) {
         other++;
-    else if (number == 930)
+    } else if (number == 930) {
         other++;
-    else if (number == 931)
+    } else if (number == 931) {
         other++;
-    else if (number == 932)
+    } else if (number == 932) {
         other++;
-    else if (number == 933)
+    } else if (number == 933) {
         other++;
-    else if (number == 934)
+    } else if (number == 934) {
         other++;
-    else if (number == 935)
+    } else if (number == 935) {
         other++;
-    else if (number == 936)
+    } else if (number == 936) {
         other++;
-    else if (number == 937)
+    } else if (number == 937) {
         other++;
-    else if (number == 938)
+    } else if (number == 938) {
         other++;
-    else if (number == 939)
+    } else if (number == 939) {
         other++;
-    else if (number == 940)
+    } else if (number == 940) {
         other++;
-    else if (number == 941)
+    } else if (number == 941) {
         other++;
-    else if (number == 942)
+    } else if (number == 942) {
         other++;
-    else if (number == 943)
+    } else if (number == 943) {
         other++;
-    else if (number == 944)
+    } else if (number == 944) {
         other++;
-    else if (number == 945)
+    } else if (number == 945) {
         other++;
-    else if (number == 946)
+    } else if (number == 946) {
         other++;
-    else if (number == 947)
+    } else if (number == 947) {
         other++;
-    else if (number == 948)
+    } else if (number == 948) {
         other++;
-    else if (number == 949)
+    } else if (number == 949) {
         other++;
-    else if (number == 950)
+    } else if (number == 950) {
         other++;
-    else if (number == 951)
+    } else if (number == 951) {
         other++;
-    else if (number == 952)
+    } else if (number == 952) {
         other++;
-    else if (number == 953)
+    } else if (number == 953) {
         other++;
-    else if (number == 954)
+    } else if (number == 954) {
         other++;
-    else if (number == 955)
+    } else if (number == 955) {
         other++;
-    else if (number == 956)
+    } else if (number == 956) {
         other++;
-    else if (number == 957)
+    } else if (number == 957) {
         other++;
-    else if (number == 958)
+    } else if (number == 958) {
         other++;
-    else if (number == 959)
+    } else if (number == 959) {
         other++;
-    else if (number == 960)
+    } else if (number == 960) {
         other++;
-    else if (number == 961)
+    } else if (number == 961) {
         other++;
-    else if (number == 962)
+    } else if (number == 962) {
         other++;
-    else if (number == 963)
+    } else if (number == 963) {
         other++;
-    else if (number == 964)
+    } else if (number == 964) {
         other++;
-    else if (number == 965)
+    } else if (number == 965) {
         other++;
-    else if (number == 966)
+    } else if (number == 966) {
         other++;
-    else if (number == 967)
+    } else if (number == 967) {
         other++;
-    else if (number == 968)
+    } else if (number == 968) {
         other++;
-    else if (number == 969)
+    } else if (number == 969) {
         other++;
-    else if (number == 970)
+    } else if (number == 970) {
         other++;
-    else if (number == 971)
+    } else if (number == 971) {
         other++;
-    else if (number == 972)
+    } else if (number == 972) {
         other++;
-    else if (number == 973)
+    } else if (number == 973) {
         other++;
-    else if (number == 974)
+    } else if (number == 974) {
         other++;
-    else if (number == 975)
+    } else if (number == 975) {
         other++;
-    else if (number == 976)
+    } else if (number == 976) {
         other++;
-    else if (number == 977)
+    } else if (number == 977) {
         other++;
-    else if (number == 978)
+    } else if (number == 978) {
         other++;
-    else if (number == 979)
+    } else if (number == 979) {
         other++;
-    else if (number == 980)
+    } else if (number == 980) {
         other++;
-    else if (number == 981)
+    } else if (number == 981) {
         other++;
-    else if (number == 982)
+    } else if (number == 982) {
         other++;
-    else if (number == 983)
+    } else if (number == 983) {
         other++;
-    else if (number == 984)
+    } else if (number == 984) {
         other++;
-    else if (number == 985)
+    } else if (number == 985) {
         other++;
-    else if (number == 986)
+    } else if (number == 986) {
         other++;
-    else if (number == 987)
+    } else if (number == 987) {
         other++;
-    else if (number == 988)
+    } else if (number == 988) {
         other++;
-    else if (number == 989)
+    } else if (number == 989) {
         other++;
-    else if (number == 990)
+    } else if (number == 990) {
         other++;
-    else if (number == 991)
+    } else if (number == 991) {
         other++;
-    else if (number == 992)
+    } else if (number == 992) {
         other++;
-    else if (number == 993)
+    } else if (number == 993) {
         other++;
-    else if (number == 994)
+    } else if (number == 994) {
         other++;
-    else if (number == 995)
+    } else if (number == 995) {
         other++;
-    else if (number == 996)
+    } else if (number == 996) {
         other++;
-    else if (number == 997)
+    } else if (number == 997) {
         other++;
-    else if (number == 998)
+    } else if (number == 998) {
         other++;
-    else if (number == 999)
+    } else if (number == 999) {
         other++;
-    else if (number == 1000)
+    } else if (number == 1000) {
         other++;
-    else
+    } else {
         other++;
+    }
 }
 
-void with_switch(int number) {
+void withSwitch(int number) {
     int other = 0;
     switch (number) {
     case 0:
