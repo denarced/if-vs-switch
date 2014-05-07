@@ -1,23 +1,9 @@
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+# Specific files
+.sconsign.dblite
+~compile.sh
 
-# Libraries
-*.lib
-*.a
+# File patterns
+*.swp
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+# Directories
+bin/
